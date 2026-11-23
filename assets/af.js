@@ -32,3 +32,25 @@ const toggle = document.getElementById('theme-toggle');
     document.addEventListener('click', e => { if (!menu.hidden && !menu.contains(e.target) && e.target !== menuBtn) setMenu(false); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); } });
     }
+  
+(function () {
+  const term = document.querySelector('.term-replay');
+  if (!term) return;
+  const lines = Array.from(term.querySelectorAll('.ln'));
+  const btn = document.getElementById('replay-btn');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    if (btn) btn.hidden = true;
+    return;
+  }
+  let timers = [];
+  function play() {
+    timers.forEach(clearTimeout); timers = [];
+    lines.forEach(l => l.classList.remove('on'));
+    let t = 250;
+    lines.forEach(l => { timers.push(setTimeout(() => l.classList.add('on'), t)); t += +(l.dataset.pause || 250); });
+  }
+  term.classList.add('armed');
+  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { play(); io.disconnect(); } }, { threshold: 0.35 });
+  io.observe(term);
+  if (btn) btn.addEventListener('click', play);
+})();

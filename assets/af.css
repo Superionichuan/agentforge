@@ -470,6 +470,26 @@
     .terminal div { white-space: pre-wrap; word-break: break-all; }
     .terminal .p { color: #f1b82d; }
     .terminal .c { color: #8a93a8; }
+    .term-replay { aspect-ratio: auto; min-height: 340px; justify-content: flex-start; font-size: 0.74rem; line-height: 1.6; }
+    .term-replay.armed .ln { visibility: hidden; }
+    .term-replay.armed .ln.on { visibility: visible; }
+    .term-replay .t { color: #8a93a8; }
+    .term-replay .ans { color: #7ee0a3; font-weight: 600; }
+    .term-replay div { word-break: normal; overflow-wrap: anywhere; padding-left: 4ch; text-indent: -4ch; }
+    #try .media-card .term-replay { flex: 1 0 auto; }
+    #try .media-card .card-body { flex: 0 0 auto; }
+    .try-list { list-style: none; margin: 0 0 18px; padding: 0; }
+    .try-list li { padding: 10px 0; border-top: 1px solid var(--border); }
+    .try-list li:first-child { border-top: 0; padding-top: 0; }
+    .try-list a, .note a, #getting-there a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--text-light);
+      text-underline-offset: 3px; transition: color 0.2s, text-decoration-color 0.2s; }
+    .try-list a:hover, .note a:hover, #getting-there a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+    .try-list a { font-weight: 600; }
+    .try-note { display: block; font-size: 0.86rem; color: var(--text-light); margin-top: 2px; }
+    .try-tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font-size: 0.72rem;
+      border: 1px solid var(--border); color: var(--text-light); vertical-align: 1px; white-space: nowrap; }
+    .try-tag.ok { border-color: #2f8f5b; color: #2f8f5b; }
+    .cmd { font-family: var(--font-mono); font-size: 0.82rem; word-break: normal; overflow-wrap: anywhere; }
     .tile { aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; text-align: center;
       background: linear-gradient(120deg, #26314f, #4b5fa8 55%, #d71440); color: #fff; font-family: var(--font-display);
       font-size: 1.9rem; font-weight: 600; border-bottom: 1px solid var(--border); }

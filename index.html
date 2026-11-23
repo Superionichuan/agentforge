@@ -67,6 +67,7 @@
       <p class="hero-note">The workshop has ended. Its tutorials, code and hackathon projects are open for anyone to use and build on.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#built">Explore what we built</a>
+        <a class="btn btn-ghost" href="#try">Try it yourself</a>
         <a class="btn btn-ghost" href="#involved">Get involved</a>
       </div>
       <ul class="stats">
@@ -126,6 +127,57 @@
     </div>
   </section>
 
+  <section id="try">
+    <div class="container wide">
+      <h2>Try It Yourself</h2>
+      <p class="lede">Open a tutorial in your browser, or watch mini_agent work through a task.</p>
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="card-body">
+            <h3>Open a tutorial in Colab</h3>
+            <ul class="try-list">
+              <li><a href="https://colab.research.google.com/github/Superionichuan/agent-tutorial/blob/main/notebooks/agent_tutorial_colab.ipynb">From chatbot to agent</a><span class="try-tag ok">no key needed</span><span class="try-note">Tutorial 1 with mini_agent. Offline mode replays a recorded run of the notebook.</span></li>
+              <li><a href="https://colab.research.google.com/github/Superionichuan/agent-tutorial/blob/main/tutorial2/notebooks/agent_memory_colab.ipynb">Agentic memory</a><span class="try-tag ok">no key needed</span><span class="try-note">Tutorial 2: add memory to mini_agent.</span></li>
+              <li><a href="https://colab.research.google.com/github/AgentForgeWorkshop/Tutorials/blob/main/Tutorial1_frameworks/01a_what_is_an_agent.ipynb">What is an agent?</a><span class="try-tag">your own API key</span><span class="try-note">Tutorial 1: write the loop by hand, then the same agent in LangChain, Pydantic AI and DeepAgents.</span></li>
+              <li><a href="https://colab.research.google.com/github/AgentForgeWorkshop/Tutorials/blob/main/Tutorial1_frameworks/01b_workflows_vs_agents.ipynb">Workflows or agents?</a><span class="try-tag">your own API key</span><span class="try-note">Tutorial 1: the same task built four ways and compared.</span></li>
+              <li><a href="https://colab.research.google.com/github/AgentForgeWorkshop/Tutorials/blob/main/Tutorial3_mcp_skills/03_mcp_skills_colab.ipynb">MCP and Agent Skills</a><span class="try-tag">your own API key</span><span class="try-note">Tutorial 3: your own MCP server and skills for literature work.</span></li>
+              <li><a href="https://github.com/AgentForgeWorkshop/Tutorials/blob/main/Tutorial4_multi-agent/Hermes_Agent_Docker_Tutorial.pdf">Run your own agent</a><span class="try-tag">guide (PDF)</span><span class="try-note">Tutorial 4: the Hermes agent in Docker on your own laptop, for macOS and Windows.</span></li>
+              <li><a href="https://colab.research.google.com/github/AgentForgeWorkshop/Tutorials/blob/main/Tutorial5_evals/hands-on/notebook/05_evaluating_a_triage_agent.ipynb">Evaluating agents</a><span class="try-tag">your own API key</span><span class="try-note">Tutorial 5: graders, an eval harness with pass@k and pass^k, prompt versions compared.</span></li>
+            </ul>
+            <div class="links"><a class="btn btn-small btn-ghost" href="https://ilkhamfy.github.io/sanity/demo.html">Live hackathon demo: Sanity →</a></div>
+          </div>
+        </article>
+        <article class="card media-card">
+          <div class="terminal term-replay" role="img" aria-label="A recorded run of mini_agent 2.0.0 in offline mode computing 3 to the power 7, which gives 2187">
+            <div class="ln" data-pause="900"><span class="p">$</span> mini_agent --backend offline &quot;Compute 3**7.&quot;</div>
+            <div class="ln">Query: Compute 3**7.</div>
+            <div class="ln t">----------------------------------------</div>
+            <div class="ln">&nbsp;</div>
+            <div class="ln">[agent Step 1]</div>
+            <div class="ln t">  Tokens: 347 in + 93 out = 440 total</div>
+            <div class="ln">  Think: The task is a single arithmetic computation, so I will use the calc tool directly.</div>
+            <div class="ln">  Action: calc({&#x27;expr&#x27;: &#x27;3**7&#x27;})</div>
+            <div class="ln" data-pause="600">  Result: 2187</div>
+            <div class="ln">&nbsp;</div>
+            <div class="ln">[agent Step 2]</div>
+            <div class="ln t">  Tokens: 708 in + 157 out = 865 total</div>
+            <div class="ln">  Think: The calc tool already evaluated 3**7 and returned 2187, so the goal is complete.</div>
+            <div class="ln" data-pause="600">  Action: done({&#x27;answer&#x27;: &#x27;2187&#x27;})</div>
+            <div class="ln">  -&gt; done</div>
+            <div class="ln t">----------------------------------------</div>
+            <div class="ln ans">Answer: 2187</div>
+          </div>
+          <div class="card-body">
+            <h3>mini_agent in action</h3>
+            <p>A real run of mini_agent 2.0.0 in offline mode. It needs no key and no network: it replays recorded tutorial tasks, so you can see the think, act and observe loop before connecting a model of your own.</p>
+            <p class="cmd">mini_agent --backend offline "Compute 3**7."</p>
+            <div class="links"><button class="btn btn-small btn-ghost" id="replay-btn" type="button">Replay</button><a class="btn btn-small btn-ghost" href="https://github.com/Superionichuan/mini_agent">Install mini_agent →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="highlights">
     <div class="container wide">
       <h2>Hackathon Highlights</h2>
@@ -136,7 +188,7 @@
           <div class="card-body">
             <h3>Sanity</h3>
             <p>A multi-agent checker that finds mathematical errors in papers. The language model proposes; a computer algebra system and Lean decide.</p>
-            <div class="links"><a class="btn btn-small btn-ghost" href="https://ilkhamfy.github.io/sanity/">Live site</a><a class="btn btn-small btn-ghost" href="https://github.com/AgentForgeWorkshop/sanity">Code</a></div>
+            <div class="links"><a class="btn btn-small btn-ghost" href="https://ilkhamfy.github.io/sanity/demo.html">Live demo</a><a class="btn btn-small btn-ghost" href="https://ilkhamfy.github.io/sanity/">Website</a><a class="btn btn-small btn-ghost" href="https://github.com/AgentForgeWorkshop/sanity">Code</a></div>
           </div>
         </article>
         <article class="card media-card">
