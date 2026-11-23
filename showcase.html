@@ -20,36 +20,49 @@
   <link rel="stylesheet" href="assets/af.css">
 </head>
 <body>
-
-  <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">☰</button>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="AgentForge home">
+        <img class="brand-light" src="assets/brand/logo-light-320.webp" width="320" height="96" alt="AgentForge">
+        <img class="brand-dark" src="assets/brand/logo-dark-320.webp" width="320" height="96" alt="AgentForge">
+      </a>
+      <nav class="primary" aria-label="Main">
+      <a href="index.html#built">What we built</a>
+      <a href="showcase.html" aria-current="page">Showcase</a>
+      <a href="programme.html">Programme</a>
+      <a href="people.html">People</a>
+      <a href="photos.html">Photos</a>
+      <a href="venue.html">Venue</a>
+      <a href="index.html#involved">Get involved</a>
+      </nav>
+      <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">☰</button>
+      <button id="theme-toggle" aria-label="Toggle dark mode">☀</button>
+    </div>
+  </header>
   <nav id="site-menu" aria-label="Site sections" hidden>
-    <a href="index.html#about">About</a>
     <a href="index.html#built">What we built</a>
-    <a href="showcase.html">Showcase</a>
+    <a href="showcase.html" aria-current="page">Showcase</a>
+    <a href="programme.html">Programme</a>
+    <a href="people.html">People</a>
     <a href="photos.html">Photos</a>
-    <a href="index.html#speakers">Speakers</a>
-    <a href="index.html#schedule">Schedule</a>
-    <a href="index.html#team">Team</a>
-    <a href="index.html#sponsors">Sponsors</a>
     <a href="venue.html">Venue</a>
+    <a href="index.html#involved">Get involved</a>
   </nav>
-
-  <button id="theme-toggle" aria-label="Toggle dark mode">☀</button>
 
   <header class="hero hero-sub">
     <div class="hero-inner">
-      <a href="index.html"><img src="assets/AgentForge_logo_v8_final_red_colorful_gear_nobg.png" alt="AgentForge" class="hero-mark hero-mark-light">
-      <img src="assets/AgentForge_logo_v8_final_for_darkmode_nobg.png" alt="AgentForge" class="hero-mark hero-mark-dark"></a>
       <h1><span class="h1-lead">AgentForge 2026</span><br>Showcase</h1>
       <div class="meta"><span>Open tutorials, an open-source teaching agent, and the research agents teams built during the hackathon.</span></div>
       <div class="hero-rule"></div>
     </div>
   </header>
+  <main id="main">
 
   <section id="materials">
-    <div class="container">
+    <div class="container wide">
       <h2>Open Materials</h2>
-      <div class="cards">
+      <div class="grid grid-2">
         <article class="card">
           <h3>Five tutorials</h3>
           <p>Slides for all five tutorials, and hands-on notebooks for four of them, several of which run in Colab with no local installation. Tutorial 4 runs a self-hosted agent in Docker.</p>
@@ -60,68 +73,94 @@
             <li>Multi-agent systems, with a self-hosted agent in Docker</li>
             <li>Evaluating a paper-triage agent: code and LLM-judge graders, pass@k</li>
           </ol>
-          <a class="more" href="https://github.com/AgentForgeWorkshop/Tutorials">github.com/AgentForgeWorkshop/Tutorials</a>
+          <a class="btn btn-small btn-ghost" href="https://github.com/AgentForgeWorkshop/Tutorials">Open the tutorials →</a>
         </article>
         <article class="card">
           <h3>mini_agent 2.0.0<span class="tag">MIT licence</span></h3>
           <p>The teaching agent from Tutorial 1, released on 23 November 2026 as an open-source package. It installs with one command on macOS, Linux and Windows.</p>
-          <a class="more" href="https://github.com/Superionichuan/mini_agent">github.com/Superionichuan/mini_agent</a>
+          <a class="btn btn-small btn-ghost" href="https://github.com/Superionichuan/mini_agent">Get mini_agent →</a>
         </article>
       </div>
     </div>
   </section>
 
   <section id="hackathon">
-    <div class="container">
+    <div class="container wide">
       <h2>Hackathon Showcase</h2>
-      <p>Teams built research agents during the workshop and evaluated them before presenting. Their code is public.</p>
-      <div class="cards">
-        <article class="card project">
-          <img src="assets/photos/ui-sanity.jpg" alt="Sanity website: Your paper's math, double-checked" loading="lazy">
-          <div>
+      <p class="lede">Teams built research agents during the workshop and evaluated them before presenting. Their code is public.</p>
+      <div class="grid grid-2">
+        <article class="card media-card">
+          <img class="media" src="assets/photos/ui-sanity.jpg" alt="Sanity website: Your paper's math, double-checked" loading="lazy">
+          <div class="card-body">
             <h3>Sanity</h3>
             <p>A multi-agent checker that finds mathematical errors in papers. The language model proposes; a computer algebra system and Lean decide.</p>
-            <a class="more" href="https://ilkhamfy.github.io/sanity/">Live site</a> &nbsp; <a class="more" href="https://github.com/AgentForgeWorkshop/sanity">Code</a>
+            <div class="links"><a class="btn btn-small btn-ghost" href="https://ilkhamfy.github.io/sanity/">Live site</a><a class="btn btn-small btn-ghost" href="https://github.com/AgentForgeWorkshop/sanity">Code</a></div>
           </div>
         </article>
-        <article class="card">
-          <h3>Think Twice</h3>
-          <p>A brainstorming agent that helps you judge how novel a research idea is.</p>
-          <a class="more" href="https://github.com/AgentForgeWorkshop/Trio-s-agent-Think-Twice">github.com/AgentForgeWorkshop/Trio-s-agent-Think-Twice</a>
-        </article>
-        <article class="card project">
-          <img src="assets/photos/ui-resplandy.jpg" alt="The Resplandy research-planning app shown on the screen during the final presentations" loading="lazy">
-          <div>
+        <article class="card media-card">
+          <img class="media" src="assets/photos/ui-resplandy.jpg" alt="The Resplandy research-planning app shown on the screen during the final presentations" loading="lazy">
+          <div class="card-body">
             <h3>Resplandy</h3>
             <p>A multi-agent research-planning assistant: agents propose, code checks, you decide.</p>
-            <a class="more" href="https://github.com/rugphy-hub/resplandy">github.com/rugphy-hub/resplandy</a>
+            <div class="links"><a class="btn btn-small btn-ghost" href="https://github.com/rugphy-hub/resplandy">Code</a></div>
           </div>
         </article>
-        <article class="card project">
-          <img src="assets/photos/ui-tripplanner.jpg" alt="A TripPlanner report comparing conference trip options, shown during the final presentations" loading="lazy">
-          <div>
+        <article class="card media-card">
+          <img class="media" src="assets/photos/ui-tripplanner.jpg" alt="A TripPlanner report comparing conference trip options, shown during the final presentations" loading="lazy">
+          <div class="card-body">
             <h3>TripPlanner</h3>
             <p>A multi-agent assistant for planning trips to academic conferences.</p>
-            <a class="more" href="https://github.com/AgentForgeWorkshop/TripPlanner">github.com/AgentForgeWorkshop/TripPlanner</a>
+            <div class="links"><a class="btn btn-small btn-ghost" href="https://github.com/AgentForgeWorkshop/TripPlanner">Code</a></div>
+          </div>
+        </article>
+        <article class="card media-card">
+          <div class="tile" aria-hidden="true">Think Twice</div>
+          <div class="card-body">
+            <h3>Think Twice</h3>
+            <p>A brainstorming agent that helps you judge how novel a research idea is.</p>
+            <div class="links"><a class="btn btn-small btn-ghost" href="https://github.com/AgentForgeWorkshop/Trio-s-agent-Think-Twice">Code</a></div>
           </div>
         </article>
       </div>
-      <p class="note" style="margin-top:16px">The organisers also published the Agent Skill they used to review the entries: <a href="https://github.com/AgentForgeWorkshop/Judgment-Skill">Judgment-Skill</a>.</p>
+      <p class="note after">The organisers also published the Agent Skill they used to review the entries: <a href="https://github.com/AgentForgeWorkshop/Judgment-Skill">Judgment-Skill</a>.</p>
     </div>
   </section>
 
-  <section id="build-on-it">
-    <div class="container">
-      <h2>Build on It</h2>
-      <p>Everything above is open. Use the materials in your own teaching, open an issue or a pull request, or take a hackathon project further for your own research.</p>
-      <a href="https://github.com/AgentForgeWorkshop" class="cta" target="_blank" rel="noopener noreferrer">AgentForge on GitHub</a>
-    </div>
-  </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2026 AgentForge. Hosted at Nanyang Technological University, Singapore. Sponsored by Schmidt Sciences.</p>
-    <p>In one of our photos and would like it removed? Email <a href="mailto:agentforge@groundstate.sg">agentforge@groundstate.sg</a>.</p>
-    <p>Site design adapted from the <a href="https://agentforgeworkshop.github.io/workshop-site/">original workshop website</a> by the AgentForge organising team.</p>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html" aria-label="AgentForge home">
+          <img class="brand-light" src="assets/brand/logo-light-320.webp" alt="AgentForge"><img class="brand-dark" src="assets/brand/logo-dark-320.webp" alt="AgentForge">
+        </a>
+        <p>An open community of scientists who build AI agents for research, test them, and judge when to trust them.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html#built">What we built</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="programme.html">Programme</a>
+        <a href="people.html">People</a>
+        <a href="photos.html">Photos</a>
+      </div>
+      <div>
+        <h4>Open source</h4>
+        <a href="https://github.com/AgentForgeWorkshop">AgentForge on GitHub</a>
+        <a href="https://github.com/AgentForgeWorkshop/Tutorials">Tutorials</a>
+        <a href="https://github.com/Superionichuan/mini_agent">mini_agent</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:agentforge@groundstate.sg">agentforge@groundstate.sg</a>
+        <a href="venue.html">Venue</a>
+      </div>
+    </div>
+    <div class="fine">
+      <p>&copy; 2026 AgentForge. Hosted at Nanyang Technological University, Singapore. Sponsored by Schmidt Sciences.</p>
+      <p>In one of our photos and would like it removed? Email <a href="mailto:agentforge@groundstate.sg">agentforge@groundstate.sg</a>.</p>
+      <p>Site design adapted from the <a href="https://agentforgeworkshop.github.io/workshop-site/">original workshop website</a> by the AgentForge organising team.</p>
+    </div>
   </footer>
 
   <script src="assets/af.js"></script>
