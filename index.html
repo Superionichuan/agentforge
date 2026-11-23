@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AgentForge — Reliable, frontier, responsible AI for science</title>
-  <meta name="description" content="AgentForge is an open, co-created community of scientists who build, test and share AI agents for research. It grew from a hands-on workshop at NTU Singapore (15–19 November 2026), supported by Schmidt Sciences. All tutorials and code are open source.">
+  <meta name="description" content="AgentForge is an open, co-created community of scientists who build, test and share AI agents for research. It grew from a workshop at NTU Singapore (15–19 November 2026), supported by Schmidt Sciences. All tutorials and code are open source.">
   <link rel="canonical" href="https://agentforge.groundstate.sg/">
+  <meta name="theme-color" content="#0B1A4A">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AgentForge — Reliable, frontier, responsible AI for science">
   <meta property="og:description" content="An open, co-created community of scientists building AI agents for research. Open tutorials, an open-source teaching agent, and hackathon projects from AgentForge 2026 in Singapore.">
@@ -16,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caladea:wght@400;700&family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/site.css">
   <script type="application/ld+json">
   {
@@ -38,7 +39,7 @@
     ],
     "url": "https://agentforge.groundstate.sg/",
     "image": "https://agentforge.groundstate.sg/assets/photos/group-nec.jpg",
-    "description": "A hands-on workshop in which scientists build AI agents, learn how they work and evaluate when to trust them."
+    "description": "A workshop in which scientists build AI agents, learn how they work and evaluate when to trust them."
   }
   </script>
 </head>
@@ -46,12 +47,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="./" aria-label="AgentForge home">
-      <picture>
-        <source srcset="assets/agentforge-logo-dark.png" media="(prefers-color-scheme: dark)">
-        <img src="assets/agentforge-logo.png" alt="AgentForge" width="127" height="38">
-      </picture>
-    </a>
+    <a class="brand" href="./" aria-label="AgentForge home"><img src="assets/agentforge-logo-trim.png" alt="AgentForge" width="143" height="36"></a>
     <nav class="nav" aria-label="Main">
       <a href="#values">Values</a>
       <a href="#built">What we built</a>
@@ -59,101 +55,143 @@
       <a href="photos.html">Photos</a>
       <a href="#playbook">Playbook</a>
       <a href="#people">People</a>
-      <a href="https://github.com/AgentForgeWorkshop">GitHub</a>
+      <a class="nav-cta" href="https://github.com/AgentForgeWorkshop">GitHub</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <div class="hero">
-    <div class="wrap">
-      <p class="kicker">Open source · Built together</p>
-      <h1>Reliable, frontier, responsible AI for science</h1>
-      <p class="lede">AgentForge is an open community of scientists who build AI agents for research, test them, and judge when to trust them. It began with a hands-on workshop at Nanyang Technological University, Singapore, on 15–19 November 2026, supported by Schmidt Sciences. Everything we make is open, and anyone can build on it.</p>
+  <div class="hero-x">
+    <div class="collage" aria-hidden="true">
+      <figure class="tile" style="--x:5%;--y:15%;--w:178px"><div class="par" data-depth="18"><div class="float" style="--dur:10s;--delay:-3s"><span class="sq" style="--sx:-15%;--sy:42%"></span><img src="assets/collage/keynote.webp" alt="" width="360" height="270"></div></div></figure>
+      <figure class="tile t-lattice t-hide-lg" style="--x:15.5%;--y:43%;--w:132px"><div class="par" data-depth="30"><div class="float" style="--dur:8s;--delay:-1s"><img src="assets/collage/lattice.webp" alt="" width="320" height="320"></div></div></figure>
+      <figure class="tile" style="--x:3.5%;--y:69%;--w:208px"><div class="par" data-depth="14"><div class="float" style="--dur:11s;--delay:-6s"><span class="sq" style="--sx:62%;--sy:-26%"></span><img src="assets/collage/group.webp" alt="" width="420" height="232"></div></div></figure>
+      <figure class="tile t-hide-lg" style="--x:23%;--y:7%;--w:112px"><div class="par" data-depth="34"><div class="float" style="--dur:9s;--delay:-4s"><img src="assets/collage/flask.webp" alt="" width="280" height="253"></div></div></figure>
+      <figure class="tile" style="--x:63%;--y:7.5%;--w:112px"><div class="par" data-depth="26"><div class="float" style="--dur:9.5s;--delay:-2s"><img src="assets/collage/diffraction.webp" alt="" width="260" height="260"></div></div></figure>
+      <figure class="tile" style="--x:81.5%;--y:18%;--w:156px"><div class="par" data-depth="22"><div class="float" style="--dur:10.5s;--delay:-5s"><span class="sq" style="--sx:58%;--sy:52%"></span><img src="assets/collage/chip.webp" alt="" width="330" height="277"></div></div></figure>
+      <figure class="tile" style="--x:83%;--y:49%;--w:194px"><div class="par" data-depth="16"><div class="float" style="--dur:12s;--delay:-7s"><img src="assets/collage/hackathon.webp" alt="" width="400" height="270"></div></div></figure>
+      <figure class="tile t-hide-lg" style="--x:31%;--y:84%;--w:112px"><div class="par" data-depth="28"><div class="float" style="--dur:8.5s;--delay:-3s"><img src="assets/collage/earth.webp" alt="" width="320" height="320"></div></div></figure>
+      <figure class="tile" style="--x:73%;--y:80%;--w:160px"><div class="par" data-depth="20"><div class="float" style="--dur:11s;--delay:-1s"><span class="sq" style="--sx:62%;--sy:48%"></span><img src="assets/collage/together.webp" alt="" width="340" height="267"></div></div></figure>
+      <figure class="tile t-hide-lg" style="--x:90%;--y:77%;--w:96px"><div class="par" data-depth="32"><div class="float" style="--dur:9s;--delay:-5s"><img src="assets/collage/protein.webp" alt="" width="280" height="309"></div></div></figure>
+      <span class="eq" style="--x:5.2%;--y:36%"><span class="par" data-depth="10">agent = LLM + tools + loop</span></span>
+      <span class="eq" style="--x:81.5%;--y:39%"><span class="par" data-depth="12">E&#8320; = min &#10216;&#968;|&#292;|&#968;&#10217;</span></span>
+      <span class="eq" style="--x:41%;--y:94%"><span class="par" data-depth="12">pass@k = 1 &#8722; C(n&#8722;c, k) / C(n, k)</span></span>
+      <span class="eq" style="--x:4%;--y:88%"><span class="par" data-depth="9">&#8711;&#178;&#934; = 4&#960;G&#961;</span></span>
+    </div>
+    <div class="center">
+      <div class="mini" aria-hidden="true"><img src="assets/collage/keynote.webp" alt="" width="360" height="270"><img src="assets/collage/lattice.webp" alt="" width="320" height="320"><img src="assets/collage/chip.webp" alt="" width="330" height="277"><img src="assets/collage/together.webp" alt="" width="340" height="267"></div>
+      <p class="tagline">Open source. <span class="hl">Built together.</span></p>
+      <h1>Agent<span class="grad">Forge</span></h1>
+      <p class="sub">Reliable, frontier, responsible AI for science</p>
+      <p class="lede">An open community of scientists who build AI agents for research, test them, and judge when to trust them. It began with a workshop at NTU Singapore in November 2026, supported by Schmidt Sciences.</p>
       <div class="buttons">
-        <a class="btn primary" href="showcase.html">See the showcase</a>
-        <a class="btn ghost" href="https://github.com/AgentForgeWorkshop/Tutorials">Tutorials on GitHub</a>
+        <a class="btn primary" href="https://github.com/AgentForgeWorkshop/Tutorials">Explore the tutorials <span class="arr" aria-hidden="true">&rarr;</span></a>
+        <a class="btn ghost" href="showcase.html">See the showcase</a>
       </div>
+      <p class="meta">AgentForge 2026 · NTU Singapore · 15–19 November 2026</p>
     </div>
   </div>
 
-  <div class="wrap">
-    <figure class="photo-band">
-      <img src="assets/photos/group-nec.jpg" alt="AgentForge 2026 participants and organisers on the stairs of the Nanyang Executive Centre" width="1600" height="800">
-      <figcaption>AgentForge 2026 at the Nanyang Executive Centre, NTU Singapore.</figcaption>
-    </figure>
-    <div class="stats" aria-label="AgentForge 2026 in numbers">
-      <div class="stat"><b>4</b><span>days of hands-on work</span></div>
-      <div class="stat"><b>3</b><span>keynote talks</span></div>
-      <div class="stat"><b>5</b><span>open tutorials</span></div>
-      <div class="stat"><b>5</b><span>hackathon teams</span></div>
+  <div class="numbers" aria-label="AgentForge 2026 in numbers">
+    <div class="wrap">
+      <div class="num"><b data-count="4">4</b><span>days of building</span></div>
+      <div class="num"><b data-count="3">3</b><span>keynote talks</span></div>
+      <div class="num"><b data-count="5">5</b><span>open tutorials</span></div>
+      <div class="num"><b data-count="5">5</b><span>hackathon teams</span></div>
     </div>
   </div>
 
   <section id="values">
     <div class="wrap">
-      <div class="section-head">
-        <h2>What we stand for</h2>
+      <div class="section-head" data-reveal>
+        <p class="kicker">What we stand for</p>
+        <h2>Agents scientists can <span class="grad">check</span>, use and own</h2>
         <p>An AI agent is more than a chatbot: it pursues a goal by planning steps and calling tools and data sources, with varying degrees of human oversight. We do not aim to turn scientists into AI developers. We build agents so that researchers understand the tools they use.</p>
       </div>
-      <div class="grid">
-        <div class="card">
-          <p class="pillar-word">Reliable</p>
-          <h3>Check before you trust</h3>
-          <p>A confident answer is not a scientific result. We test agents the way we test methods: how was the output produced, is the process valid, and can it be reproduced?</p>
-        </div>
-        <div class="card">
-          <p class="pillar-word">Frontier</p>
-          <h3>Work with today's tools</h3>
-          <p>Memory, tool use through MCP, Agent Skills, multi-agent systems: we build with current agent technology, adapt it to real research questions, and share what works and what does not.</p>
-        </div>
-        <div class="card">
-          <p class="pillar-word">Responsible</p>
-          <h3>Judgment stays with scientists</h3>
-          <p>Scientists know the questions, the methods and the standards of evidence. They should help decide how AI is designed, evaluated and brought into research, and stay responsible for the results.</p>
-        </div>
+      <div class="stack" data-reveal>
+        <svg class="wires" aria-hidden="true"><path d=""/><path class="flow" d=""/></svg>
+        <ul class="problems" aria-label="What gets in the way">
+          <li><figure class="duo"><img src="assets/collage/flask_card.jpg" alt="" width="360" height="360" loading="lazy"></figure><div><b>A confident answer is not a result</b><span>Agents can be fluent and wrong, and they act on what they produce.</span></div></li>
+          <li><figure class="duo"><img src="assets/collage/chip_card.jpg" alt="" width="360" height="360" loading="lazy"></figure><div><b>The tools change every month</b><span>Models, MCP servers and agent frameworks move faster than any course.</span></div></li>
+          <li><figure class="duo"><img src="assets/collage/protein_card.jpg" alt="" width="360" height="360" loading="lazy"></figure><div><b>Who sets the standard?</b><span>Scientists know the questions, the methods and what counts as evidence.</span></div></li>
+        </ul>
+        <figure class="platform"><img src="assets/platform.webp" alt="Illustration: three stacked plates, with circuits at the bottom, a crystal and a molecule in the middle, and a magnifying glass over a chart on top" width="1400" height="1045" loading="lazy"></figure>
+        <ul class="answers" aria-label="How we work">
+          <li><p class="word grad">Reliable</p><h3>Check before you trust</h3><p>A confident answer is not a scientific result. We test agents the way we test methods: how was the output produced, is the process valid, and can it be reproduced?</p></li>
+          <li><p class="word grad">Frontier</p><h3>Work with today's tools</h3><p>Memory, tool use through MCP, Agent Skills, multi-agent systems: we build with current agent technology, adapt it to real research questions, and share what works and what does not.</p></li>
+          <li><p class="word grad">Responsible</p><h3>Judgment stays with scientists</h3><p>Scientists know the questions, the methods and the standards of evidence. They should help decide how AI is designed, evaluated and brought into research, and stay responsible for the results.</p></li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="alt" id="origin">
-    <div class="wrap"><div class="prose">
-      <div class="section-head">
-        <h2>Where AgentForge came from</h2>
+    <div class="wrap">
+      <div class="story" data-reveal>
+        <p class="kicker">Oxford, September 2025</p>
+        <h2>One Schmidt community<br>inspires the next</h2>
+        <p>AgentForge was inspired by a Schmidt Sciences community event: the Schmidt Research Software Engineering Training Programme in Oxford (11–20 September 2025). For ten days, fellows from very different fields worked in small teams and built research software together. Some of us met there.</p>
+        <p>That experience of learning by building, side by side, is what we wanted to pass on. It shaped how we designed AgentForge: tutorials with code that runs, followed by a hackathon in which teams build and evaluate their own research agents. We want to carry that spirit forward, from one Schmidt Sciences community to the next and beyond.</p>
       </div>
-      <p>AgentForge was inspired by a Schmidt Sciences community event: the Schmidt Research Software Engineering Training Programme in Oxford (11–20 September 2025). For ten days, fellows from very different fields worked in small teams and built research software together, hands-on. Some of us met there.</p>
-      <p>That experience of learning by building, side by side, is what we wanted to pass on. It shaped how we designed AgentForge: tutorials with code that runs, followed by a hackathon in which teams build and evaluate their own research agents. We want to carry that spirit forward, from one Schmidt Sciences community to the next and beyond.</p>
-    </div></div>
+      <figure class="duo band-photo" data-reveal>
+        <img src="assets/photos/group-nec.jpg" alt="AgentForge 2026 participants and organisers on the stairs of the Nanyang Executive Centre" width="1600" height="800" loading="lazy">
+        <figcaption>AgentForge 2026 · Nanyang Executive Centre, NTU Singapore</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section id="built">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Open materials</p>
         <h2>What we built</h2>
         <p>All materials from AgentForge 2026 are public. Use them in your own teaching and research.</p>
       </div>
-      <div class="grid">
-        <div class="card">
-          <h3>Five open tutorials</h3>
-          <p>Slides and Colab notebooks that run without any local installation.</p>
-          <ol>
-            <li>From chatbot to agent</li>
-            <li>Agentic memory</li>
-            <li>Agents on platforms: MCP and Agent Skills</li>
-            <li>Multi-agent systems</li>
-            <li>Evaluating agents</li>
-          </ol>
-          <a class="more" href="https://github.com/AgentForgeWorkshop/Tutorials">github.com/AgentForgeWorkshop/Tutorials</a>
+      <div class="built">
+        <div class="stackcol">
+          <div class="card" data-reveal>
+            <h3>Five open tutorials</h3>
+            <p>Slides and Colab notebooks that run without any local installation.</p>
+            <ol class="tlist">
+              <li>From chatbot to agent</li>
+              <li>Agentic memory</li>
+              <li>Agents on platforms: MCP and Agent Skills</li>
+              <li>Multi-agent systems</li>
+              <li>Evaluating agents</li>
+            </ol>
+            <a class="more" href="https://github.com/AgentForgeWorkshop/Tutorials">github.com/AgentForgeWorkshop/Tutorials</a>
+          </div>
+          <div class="card" data-reveal>
+            <h3>Hackathon projects</h3>
+            <p>Teams built research agents during the week, from a checker that finds mathematical errors in papers to an agent that judges how novel a research idea is. Their code is public.</p>
+            <a class="more" href="showcase.html">See the showcase</a>
+          </div>
         </div>
-        <div class="card">
-          <h3>mini_agent 2.0.0<span class="badge">open source</span></h3>
-          <p>The teaching agent from Tutorial 1: a small, complete AI agent for the terminal and for Python, with the agent loop in plain sight. Released under the MIT licence; it installs with one command on macOS, Linux and Windows.</p>
+        <div class="card" data-reveal>
+          <h3>mini_agent 2.0.0<span class="badge">MIT licence</span></h3>
+          <p>The teaching agent from Tutorial 1: a small, complete AI agent for the terminal and for Python, with the agent loop in plain sight. It installs with one command on macOS, Linux and Windows.</p>
+          <div class="term" data-term>
+            <div class="bar"><i></i><i></i><i></i><span>mini_agent 2.0.0 · offline demo</span></div>
+<pre><span class="ln"><span class="p">$</span> <span class="c">mini_agent --backend offline "Compute 3**7."</span>
+</span><span class="ln" data-wait="260"><span class="k">Query:</span> Compute 3**7.
+</span><span class="ln" data-wait="120">----------------------------------------
+</span><span class="ln" data-wait="420">
+[agent Step 1]
+</span><span class="ln" data-wait="160"><span class="k">  Tokens: 347 in + 93 out = 440 total</span>
+</span><span class="ln" data-wait="520">  Think: The task is a single arithmetic computation, so I will use the calc tool directly.
+</span><span class="ln" data-wait="380"><span class="a">  Action: calc({'expr': '3**7'})</span>
+</span><span class="ln" data-wait="420"><span class="r">  Result: 2187</span>
+</span><span class="ln" data-wait="420">
+[agent Step 2]
+</span><span class="ln" data-wait="160"><span class="k">  Tokens: 708 in + 157 out = 865 total</span>
+</span><span class="ln" data-wait="520">  Think: The calc tool already evaluated 3**7 and returned 2187, so the goal is complete.
+</span><span class="ln" data-wait="380"><span class="a">  Action: done({'answer': '2187'})</span>
+</span><span class="ln" data-wait="160">  -&gt; done
+</span><span class="ln" data-wait="120">----------------------------------------
+</span><span class="ln" data-wait="200"><span class="ans">Answer: 2187</span></span></pre>
+          </div>
+          <code class="install">curl -LsSf https://raw.githubusercontent.com/Superionichuan/mini_agent/main/install.sh | sh</code>
           <a class="more" href="https://github.com/Superionichuan/mini_agent">github.com/Superionichuan/mini_agent</a>
-        </div>
-        <div class="card">
-          <h3>Hackathon projects</h3>
-          <p>Teams built research agents during the week, from a checker that finds mathematical errors in papers to an agent that judges how novel a research idea is. Their code is public.</p>
-          <a class="more" href="showcase.html">See the showcase</a>
         </div>
       </div>
     </div>
@@ -161,25 +199,26 @@
 
   <section class="alt" id="hackathon">
     <div class="wrap">
-      <div class="section-head">
-        <h2>From the hackathon</h2>
-        <p>Working interfaces, built and evaluated during the workshop.</p>
+      <div class="section-head" data-reveal>
+        <p class="kicker">From the hackathon</p>
+        <h2>Built in a week</h2>
+        <p>Working interfaces, built and evaluated by participants during the workshop.</p>
       </div>
       <div class="grid">
-        <div class="card">
-          <figure class="shot"><img src="assets/photos/ui-sanity.jpg" alt="Sanity website: Your paper's math, double-checked" width="800" height="500" loading="lazy"></figure>
+        <div class="card" data-reveal>
+          <figure class="shot duo"><img src="assets/photos/ui-sanity.jpg" alt="Sanity website: Your paper's math, double-checked" width="800" height="500" loading="lazy"></figure>
           <h3>Sanity</h3>
           <p>Finds mathematical errors in papers: the language model proposes, a computer algebra system and Lean decide.</p>
           <a class="more" href="https://ilkhamfy.github.io/sanity/">Try the live site</a>
         </div>
-        <div class="card">
-          <figure class="shot"><img src="assets/photos/ui-resplandy.jpg" alt="The Resplandy research-planning app shown on the screen during the final presentations" width="800" height="500" loading="lazy"></figure>
+        <div class="card" data-reveal>
+          <figure class="shot duo"><img src="assets/photos/ui-resplandy.jpg" alt="The Resplandy research-planning app shown on the screen during the final presentations" width="800" height="500" loading="lazy"></figure>
           <h3>Resplandy</h3>
           <p>A research-planning assistant: agents propose, code checks, you decide.</p>
           <a class="more" href="https://github.com/rugphy-hub/resplandy">See the code</a>
         </div>
-        <div class="card">
-          <figure class="shot"><img src="assets/photos/ui-tripplanner.jpg" alt="A TripPlanner report comparing conference trip options, shown during the final presentations" width="800" height="500" loading="lazy"></figure>
+        <div class="card" data-reveal>
+          <figure class="shot duo"><img src="assets/photos/ui-tripplanner.jpg" alt="A TripPlanner report comparing conference trip options, shown during the final presentations" width="800" height="500" loading="lazy"></figure>
           <h3>TripPlanner</h3>
           <p>Plans trips to academic conferences and writes a report that compares the options.</p>
           <a class="more" href="https://github.com/AgentForgeWorkshop/TripPlanner">See the code</a>
@@ -188,42 +227,60 @@
     </div>
   </section>
 
-
   <section id="photos">
     <div class="wrap">
-      <div class="section-head">
-        <h2>The week in pictures</h2>
-        <p><a href="photos.html">See all photos</a>, in full size to download and share.</p>
-      </div>
-      <div class="gallery">
-        <figure><img src="assets/photos/keynote.jpg" alt="Prof. Bo An giving the opening keynote" width="800" height="600" loading="lazy"><figcaption>Keynote: open challenges of agentic AI</figcaption></figure>
-        <figure><img src="assets/photos/hands-on.jpg" alt="Participants working on laptops at round tables" width="800" height="600" loading="lazy"><figcaption>Hands-on tutorials</figcaption></figure>
-        <figure><img src="assets/photos/tutorial.jpg" alt="A tutorial lead explaining pass@k at the screen" width="800" height="600" loading="lazy"><figcaption>Evaluating agents: pass@k and pass^k</figcaption></figure>
-        <figure><img src="assets/photos/hackathon.jpg" alt="The Sanity team presenting their project" width="800" height="600" loading="lazy"><figcaption>Hackathon presentations</figcaption></figure>
-        <figure><img src="assets/photos/evening.jpg" alt="Participants together on an evening outing in Singapore" width="800" height="600" loading="lazy"><figcaption>Evenings in Singapore</figcaption></figure>
-        <figure><img src="assets/photos/together.jpg" alt="Participants' hands meeting in a circle, seen from below" width="800" height="600" loading="lazy"><figcaption>Built together</figcaption></figure>
+      <div class="section-head" data-reveal>
+        <p class="kicker">The week in pictures</p>
+        <h2>Five days in Singapore</h2>
+        <p>Hover over a photo to see it in colour. Every photo is on the <a href="photos.html">photos page</a> in full size, to download and share.</p>
       </div>
     </div>
+    <div class="marquee" data-reveal>
+      <div class="track">
+        <figure class="duo"><img src="assets/gallery/thumb/02-keynote.jpg" alt="Keynote: open challenges of agentic AI" width="600" height="450" loading="lazy"><figcaption>Keynote</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/03-tutorial-memory.jpg" alt="Tutorial: agentic memory" width="600" height="450" loading="lazy"><figcaption>Tutorial: agentic memory</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/06-hands-on.jpg" alt="Building agents together" width="600" height="450" loading="lazy"><figcaption>Building agents together</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/04-tutorial-evaluation.jpg" alt="Tutorial: evaluating agents" width="600" height="450" loading="lazy"><figcaption>Tutorial: evaluating agents</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/07-hackathon-sanity.jpg" alt="Hackathon: Sanity" width="600" height="450" loading="lazy"><figcaption>Hackathon: Sanity</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/08-hackathon-resplandy.jpg" alt="Hackathon: Resplandy" width="600" height="450" loading="lazy"><figcaption>Hackathon: Resplandy</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/11-awards.jpg" alt="Excellent Researcher Awards" width="600" height="450" loading="lazy"><figcaption>Excellent Researcher Awards</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/17-evening.jpg" alt="Dinner at Lau Pa Sat" width="600" height="450" loading="lazy"><figcaption>Dinner at Lau Pa Sat</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/18-evening.jpg" alt="By the Merlion at night" width="600" height="450" loading="lazy"><figcaption>By the Merlion at night</figcaption></figure>
+        <figure class="duo"><img src="assets/gallery/thumb/20-together.jpg" alt="Built together" width="600" height="450" loading="lazy"><figcaption>Built together</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/02-keynote.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Keynote</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/03-tutorial-memory.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Tutorial: agentic memory</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/06-hands-on.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Building agents together</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/04-tutorial-evaluation.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Tutorial: evaluating agents</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/07-hackathon-sanity.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Hackathon: Sanity</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/08-hackathon-resplandy.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Hackathon: Resplandy</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/11-awards.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Excellent Researcher Awards</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/17-evening.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Dinner at Lau Pa Sat</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/18-evening.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>By the Merlion at night</figcaption></figure>
+        <figure class="duo" aria-hidden="true"><img src="assets/gallery/thumb/20-together.jpg" alt="" width="600" height="450" loading="lazy"><figcaption>Built together</figcaption></figure>
+      </div>
+    </div>
+    <div class="center-cta"><a class="btn ghost" href="photos.html">See all 20 photos <span class="arr" aria-hidden="true">&rarr;</span></a></div>
   </section>
 
-  <section class="alt" id="playbook">
+  <section class="alt dots" id="playbook">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Coming next: the AgentForge Playbook</h2>
-        <p>An open guide to running a hands-on AI-agent workshop for scientists, drawn from what worked, and what did not, at AgentForge 2026.</p>
+      <div class="section-head" data-reveal>
+        <p class="kicker">Coming next</p>
+        <h2>The AgentForge Playbook</h2>
+        <p>An open guide to running an AI-agent workshop for scientists, drawn from what worked, and what did not, at AgentForge 2026.</p>
       </div>
       <div class="steps">
-        <div class="step">
-          <span class="status">In preparation</span>
+        <div class="step" data-reveal>
+          <span class="status now">In preparation</span>
           <h3>Learn it</h3>
           <p>How we designed the programme: tutorials, hackathon, evaluation, timeline and budget.</p>
         </div>
-        <div class="step">
+        <div class="step" data-reveal>
           <span class="status">Next</span>
           <h3>Follow it</h3>
           <p>Templates and checklists that other organisers can reuse for their own workshops.</p>
         </div>
-        <div class="step">
+        <div class="step" data-reveal>
           <span class="status">Later</span>
           <h3>Write it together</h3>
           <p>We will open the playbook to contributions, so that every workshop that uses it can make it better.</p>
@@ -234,12 +291,13 @@
 
   <section id="people">
     <div class="wrap">
-      <div class="section-head">
-        <h2>People</h2>
+      <div class="section-head" data-reveal>
+        <p class="kicker">People</p>
+        <h2>Made by everyone who built something</h2>
         <p>AgentForge 2026 was made by its organisers, speakers, tutorial leads and every participant who built something during the week.</p>
       </div>
 
-      <div class="people-group">
+      <div class="people-group" data-reveal>
         <h3>Keynote speakers</h3>
         <ul class="people">
           <li><b>Prof. Bo An</b><span>President's Chair Professor and Head of the Division of Artificial Intelligence, College of Computing and Data Science, NTU</span><em>AI Agents: From Scaffolding to Self-Improvement</em></li>
@@ -248,7 +306,7 @@
         </ul>
       </div>
 
-      <div class="people-group">
+      <div class="people-group" data-reveal>
         <h3>Organising team</h3>
         <ul class="people">
           <li><b>Dmytro Kosiachevskyi</b><span>Schmidt AI in Science Postdoctoral Fellow, National University of Singapore</span></li>
@@ -260,7 +318,7 @@
         </ul>
       </div>
 
-      <div class="people-group">
+      <div class="people-group" data-reveal>
         <h3>Tutorial leads</h3>
         <ul class="people">
           <li><b>Martin Hoffmann Petersen</b><span>NTU AI4X Postdoctoral Fellow, Nanyang Technological University</span></li>
@@ -277,24 +335,29 @@
     </div>
   </section>
 
-  <section class="alt" id="involved">
+  <section class="alt has-ground" id="involved">
+    <div class="ground" aria-hidden="true">
+      <canvas id="ground"></canvas>
+      <span class="cap">hot &rarr; cooling &rarr; ground state</span>
+    </div>
     <div class="wrap">
-      <div class="section-head">
-        <h2>Open source, built together</h2>
+      <div class="section-head" data-reveal>
+        <p class="kicker">Get involved</p>
+        <h2>Open source, <span class="grad">built together</span></h2>
         <p>We want AgentForge to grow as an open community in which scientists from every field build, test and share AI agents for research, and learn from each other's mistakes as much as from their successes.</p>
       </div>
       <div class="grid">
-        <div class="card">
+        <div class="card" data-reveal>
           <h3>Teach with it</h3>
           <p>Run the tutorials in your own course or group meeting. The notebooks open in Colab, and the slides are in the repository.</p>
           <a class="more" href="https://github.com/AgentForgeWorkshop/Tutorials">Get the tutorials</a>
         </div>
-        <div class="card">
+        <div class="card" data-reveal>
           <h3>Build on it</h3>
           <p>Extend mini_agent or a hackathon project for your own research, and send improvements back as a pull request.</p>
           <a class="more" href="https://github.com/AgentForgeWorkshop">Browse the code</a>
         </div>
-        <div class="card">
+        <div class="card" data-reveal>
           <h3>Tell us what you need</h3>
           <p>Found a bug, or want a tutorial on a topic we have not covered? Open an issue. New activities will be announced on this page.</p>
           <a class="more" href="https://github.com/AgentForgeWorkshop/Tutorials/issues">Open an issue</a>
@@ -305,12 +368,12 @@
 
   <section id="supporters">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Supported by</h2>
+      <div class="section-head" data-reveal>
+        <p class="kicker">Supported by</p>
       </div>
-      <div class="supporters">
-        <a href="https://www.schmidtsciences.org/"><img src="assets/schmidt-logo.png" alt="Schmidt Sciences" width="140" height="52"></a>
-        <a href="https://www.ntu.edu.sg/"><img src="assets/ntu-logo.png" alt="Nanyang Technological University" width="127" height="52"></a>
+      <div class="supporters" data-reveal>
+        <a href="https://www.schmidtsciences.org/"><img src="assets/schmidt-logo.png" alt="Schmidt Sciences" width="135" height="50"></a>
+        <a href="https://www.ntu.edu.sg/"><img src="assets/ntu-logo.png" alt="Nanyang Technological University" width="122" height="50"></a>
       </div>
     </div>
   </section>
@@ -323,5 +386,6 @@
     <span>In one of our photos and would like it removed? Email <a href="mailto:agentforge@groundstate.sg">agentforge@groundstate.sg</a>.</span>
   </div>
 </footer>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
