@@ -4,7 +4,7 @@ Source of https://agentforge.groundstate.sg/, the site of AgentForge, an open, c
 It grew from AgentForge 2026, a hands-on workshop at Nanyang Technological University, Singapore (15–19 November 2026), supported by Schmidt Sciences.
 
 - `index.html`: home page
-- `showcase.html`: open materials and hackathon projects
+- `showcase.html`: public workshop materials and hackathon projects
 - `programme.html`: the 2026 workshop programme
 - `people.html`: speakers, tutorial leads and organisers
 - `photos.html`: photos from the week
