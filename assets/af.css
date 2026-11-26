@@ -470,13 +470,22 @@
     .terminal div { white-space: pre-wrap; word-break: break-all; }
     .terminal .p { color: #f1b82d; }
     .terminal .c { color: #8a93a8; }
-    .term-replay { aspect-ratio: auto; min-height: 340px; justify-content: flex-start; font-size: 0.74rem; line-height: 1.6; }
-    .term-replay.armed .ln { visibility: hidden; }
-    .term-replay.armed .ln.on { visibility: visible; }
-    .term-replay .t { color: #8a93a8; }
-    .term-replay .ans { color: #7ee0a3; font-weight: 600; }
-    .term-replay div { word-break: normal; overflow-wrap: anywhere; padding-left: 4ch; text-indent: -4ch; }
-    #try .media-card .term-replay { flex: 1 0 auto; }
+    .demo-tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 14px 14px 4px; background: #12161f; }
+    .demo-tabs button { font: 600 0.78rem/1.2 var(--font-body); color: #aab3c7; background: transparent; cursor: pointer;
+      border: 1px solid #2c3447; border-radius: 999px; padding: 6px 12px; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+    .demo-tabs button:hover { color: #fff; border-color: #56627f; }
+    .demo-tabs button[aria-selected="true"] { color: #12161f; background: #f1b82d; border-color: #f1b82d; }
+    .demo-tabs button:focus-visible { outline: 2px solid #f1b82d; outline-offset: 2px; }
+    .demo-screen { background: #12161f; padding: 6px 8px 10px; border-bottom: 1px solid var(--border); min-height: 280px; }
+    .demo-screen .ap-wrapper { background: #12161f; }
+    .demo-note { font-size: 0.8rem; color: var(--text-light); margin-top: -6px; }
+    .demo-noscript { color: #aab3c7; font-size: 0.9rem; padding: 24px 12px; margin: 0; }
+    .ap-player.asciinema-player-theme-af { --term-color-foreground: #d7dcea; --term-color-background: #12161f;
+      --term-color-0: #1d2230; --term-color-1: #e06c75; --term-color-2: #7ee0a3; --term-color-3: #f1b82d;
+      --term-color-4: #6fa8ff; --term-color-5: #c792ea; --term-color-6: #56c8d8; --term-color-7: #d7dcea;
+      --term-color-8: #5c6578; --term-color-9: #ff8a94; --term-color-10: #a5f0c0; --term-color-11: #ffd36b;
+      --term-color-12: #9cc3ff; --term-color-13: #ddb3ff; --term-color-14: #8fe3ee; --term-color-15: #ffffff; }
+    #try .media-card .demo-screen { flex: 1 0 auto; }
     #try .media-card .card-body { flex: 0 0 auto; }
     .try-list { list-style: none; margin: 0 0 18px; padding: 0; }
     .try-list li { padding: 10px 0; border-top: 1px solid var(--border); }

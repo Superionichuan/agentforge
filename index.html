@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/af.css">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "EducationEvent", "name": "AgentForge: Hands-on Workshop on AI Agents as Scientific Research Assistants", "startDate": "2026-11-15", "endDate": "2026-11-19", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Nanyang Executive Centre (NEC), Nanyang Technological University", "address": {"@type": "PostalAddress", "addressLocality": "Singapore", "addressCountry": "SG"}}, "organizer": {"@type": "Organization", "name": "AgentForge organising team", "url": "https://agentforge.groundstate.sg/"}, "sponsor": {"@type": "Organization", "name": "Schmidt Sciences", "url": "https://www.schmidtsciences.org"}, "url": "https://agentforge.groundstate.sg/", "image": "https://agentforge.groundstate.sg/assets/og-image.png", "description": "AgentForge is an open community of scientists who build AI agents for research, test them, and judge when to trust them. It began with a hands-on workshop at NTU Singapore, 15–19 November 2026, supported by Schmidt Sciences."}</script>
+  <link rel="stylesheet" href="assets/vendor/asciinema-player/asciinema-player.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -147,31 +148,21 @@
             <div class="links"><a class="btn btn-small btn-ghost" href="https://ilkhamfy.github.io/sanity/demo.html">Live hackathon demo: Sanity →</a></div>
           </div>
         </article>
-        <article class="card media-card">
-          <div class="terminal term-replay" role="img" aria-label="A recorded run of mini_agent 2.0.0 in offline mode computing 3 to the power 7, which gives 2187">
-            <div class="ln" data-pause="900"><span class="p">$</span> mini_agent --backend offline &quot;Compute 3**7.&quot;</div>
-            <div class="ln">Query: Compute 3**7.</div>
-            <div class="ln t">----------------------------------------</div>
-            <div class="ln">&nbsp;</div>
-            <div class="ln">[agent Step 1]</div>
-            <div class="ln t">  Tokens: 347 in + 93 out = 440 total</div>
-            <div class="ln">  Think: The task is a single arithmetic computation, so I will use the calc tool directly.</div>
-            <div class="ln">  Action: calc({&#x27;expr&#x27;: &#x27;3**7&#x27;})</div>
-            <div class="ln" data-pause="600">  Result: 2187</div>
-            <div class="ln">&nbsp;</div>
-            <div class="ln">[agent Step 2]</div>
-            <div class="ln t">  Tokens: 708 in + 157 out = 865 total</div>
-            <div class="ln">  Think: The calc tool already evaluated 3**7 and returned 2187, so the goal is complete.</div>
-            <div class="ln" data-pause="600">  Action: done({&#x27;answer&#x27;: &#x27;2187&#x27;})</div>
-            <div class="ln">  -&gt; done</div>
-            <div class="ln t">----------------------------------------</div>
-            <div class="ln ans">Answer: 2187</div>
+        <article class="card media-card demo-card">
+          <div class="demo-tabs" role="tablist" aria-label="mini_agent recordings">
+            <button type="button" role="tab" id="demo-tab-offline" aria-controls="demo-screen" aria-selected="true" tabindex="0" data-cast="assets/casts/offline.cast" data-end="10.80" data-title="Offline, with no key" data-text="mini_agent starts with its dolphin, then answers from a recorded run: it calls its calculator tool and reports 2187. Offline mode needs no key and no network, and replays only the tutorial&#x27;s recorded tasks." data-cmd="mini_agent --backend offline" data-label="Recording: mini_agent 2.0.0 in offline mode computes 3 to the power 7 with its calculator tool and answers 2187.">No key: offline</button>
+            <button type="button" role="tab" id="demo-tab-primes" aria-controls="demo-screen" aria-selected="false" tabindex="-1" data-cast="assets/casts/primes.cast" data-end="25.50" data-title="It asks before it acts" data-text="A live run with deepseek-v4-flash through OpenRouter. mini_agent writes primes.py and runs it; before each step that writes a file or runs a command, it shows the step and asks: yes, no, or always for this tool." data-cmd="mini_agent" data-label="Recording: mini_agent writes primes.py, asks for approval twice, runs the script and prints the first ten primes.">Asks before it acts</button>
+            <button type="button" role="tab" id="demo-tab-continue" aria-controls="demo-screen" aria-selected="false" tabindex="-1" data-cast="assets/casts/continue.cast" data-end="42.16" data-title="It continues after a stop" data-text="Ctrl+C stops the task after two of five files. mini_agent -c picks the task up from its session log, works through the rest of its plan, and all five files are there. --yes allows each step without asking." data-cmd="mini_agent --yes   ·   mini_agent -c --yes" data-label="Recording: a task to create five files is stopped after two; mini_agent -c continues it and lists the five files.">Continues after a stop</button>
+          </div>
+          <div class="demo-screen" id="demo-screen" role="tabpanel" aria-label="Recording: mini_agent 2.0.0 in offline mode computes 3 to the power 7 with its calculator tool and answers 2187.">
+            <noscript><p class="demo-noscript">These recordings play with JavaScript enabled.</p></noscript>
           </div>
           <div class="card-body">
-            <h3>mini_agent in action</h3>
-            <p>A real run of mini_agent 2.0.0 in offline mode. It needs no key and no network: it replays recorded tutorial tasks, so you can see the think, act and observe loop before connecting a model of your own.</p>
-            <p class="cmd">mini_agent --backend offline "Compute 3**7."</p>
-            <div class="links"><button class="btn btn-small btn-ghost" id="replay-btn" type="button">Replay</button><a class="btn btn-small btn-ghost" href="https://github.com/Superionichuan/mini_agent">Install mini_agent →</a></div>
+            <h3 class="demo-title">Offline, with no key</h3>
+            <p class="demo-text">mini_agent starts with its dolphin, then answers from a recorded run: it calls its calculator tool and reports 2187. Offline mode needs no key and no network, and replays only the tutorial&#x27;s recorded tasks.</p>
+            <p class="cmd demo-cmd">mini_agent --backend offline</p>
+            <p class="demo-note">Real terminal recordings of mini_agent 2.0.0, made in November 2026 and played as recorded; waits longer than two seconds for the model are shortened to two seconds.</p>
+            <div class="links"><a class="btn btn-small btn-ghost" href="https://github.com/Superionichuan/mini_agent">Install mini_agent →</a></div>
           </div>
         </article>
       </div>
@@ -351,6 +342,7 @@
     </div>
   </footer>
 
+  <script src="assets/vendor/asciinema-player/asciinema-player.min.js"></script>
   <script src="assets/af.js"></script>
 </body>
 </html>

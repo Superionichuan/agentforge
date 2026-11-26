@@ -34,23 +34,44 @@ const toggle = document.getElementById('theme-toggle');
     }
   
 (function () {
-  const term = document.querySelector('.term-replay');
-  if (!term) return;
-  const lines = Array.from(term.querySelectorAll('.ln'));
-  const btn = document.getElementById('replay-btn');
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-    if (btn) btn.hidden = true;
-    return;
+  // mini_agent recordings: real terminal sessions (asciicast files) played by asciinema-player.
+  const card = document.querySelector('.demo-card');
+  if (!card || !window.AsciinemaPlayer) return;
+  const tabs = Array.from(card.querySelectorAll('[role="tab"]'));
+  const screen = card.querySelector('.demo-screen');
+  const title = card.querySelector('.demo-title'), text = card.querySelector('.demo-text'), cmd = card.querySelector('.demo-cmd');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let player = null, current = 0, auto = !reduce, timer = null;
+  function show(i, play) {
+    clearTimeout(timer);
+    if (player) { try { player.dispose(); } catch (e) {} player = null; }
+    screen.textContent = '';
+    current = i;
+    tabs.forEach((t, k) => { t.setAttribute('aria-selected', k === i ? 'true' : 'false'); t.tabIndex = k === i ? 0 : -1; });
+    const t = tabs[i];
+    title.textContent = t.dataset.title; text.textContent = t.dataset.text; cmd.textContent = t.dataset.cmd;
+    screen.setAttribute('aria-label', t.dataset.label);
+    player = AsciinemaPlayer.create(t.dataset.cast, screen, {
+      autoPlay: play, loop: false, fit: 'width', theme: 'af', idleTimeLimit: 2, controls: true,
+      poster: 'npt:' + t.dataset.end });
+    player.addEventListener('ended', () => {
+      if (auto) timer = setTimeout(() => { if (auto) show((current + 1) % tabs.length, true); }, 3000);
+    });
   }
-  let timers = [];
-  function play() {
-    timers.forEach(clearTimeout); timers = [];
-    lines.forEach(l => l.classList.remove('on'));
-    let t = 250;
-    lines.forEach(l => { timers.push(setTimeout(() => l.classList.add('on'), t)); t += +(l.dataset.pause || 250); });
-  }
-  term.classList.add('armed');
-  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { play(); io.disconnect(); } }, { threshold: 0.35 });
-  io.observe(term);
-  if (btn) btn.addEventListener('click', play);
+  tabs.forEach((t, k) => {
+    t.addEventListener('click', () => { auto = false; show(k, true); });
+    t.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      const n = (current + d + tabs.length) % tabs.length;
+      tabs[n].focus(); auto = false; show(n, true);
+    });
+  });
+  show(0, false);
+  if (reduce || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(es => {
+    if (es.some(e => e.isIntersecting)) { io.disconnect(); if (auto && current === 0) show(0, true); }
+  }, { threshold: 0.4 });
+  io.observe(card);
 })();
